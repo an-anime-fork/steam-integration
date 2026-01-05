@@ -26,3 +26,17 @@ leave that analysis to VTubers with degrees in neurology, psychology or related 
 FILTHY MOUTH) - but their models and architecture are definitely NOT what you'd see from bog-standard GPT instances.
 
 Vedal, Neuro and Evil are the best of us. OpenAI and Microslop, the worst.
+
+# Shout-outs
+
+## Sister projects
+
+This project will have replicated code from multiple projects under [an-anime-team](https://github.com/an-anime-team).
+In fact, many parts of the core logic may be lifted from those. @cybik is a [member](https://github.com/orgs/an-anime-team/people)
+of the projects and did contribute logic to it, as well as create forks of core projects from the team (see [an-anime-fork](https://github.com/an-anime-fork)).
+
+This project is intended to replace the whole launcher code with a leaner approach specifically intended as a light
+wrapper around Steam-handled games and runners, instead of handling everything about the weeb games. But we WILL pay 
+our respects to the originals.
+
+AAGL for the win.
