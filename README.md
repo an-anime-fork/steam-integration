@@ -25,4 +25,4 @@ The only AI that deserve to exist right now are Vedal's "twin"  models. I won't 
 leave that analysis to VTubers with degrees in neurology, psychology or related fields of study (THEY EXIST, SHUT YOUR
 FILTHY MOUTH) - but their models and architecture are definitely NOT what you'd see from bog-standard GPT instances.
 
-Vedal's Neuro and Evil are the best of us. OpenAI and Microslop, the worst.
+Vedal, Neuro and Evil are the best of us. OpenAI and Microslop, the worst.
