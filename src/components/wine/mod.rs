@@ -45,9 +45,6 @@ pub struct Features {
 
     pub bundle: Option<Bundle>,
 
-    /// Whether this wine group needs DXVK
-    pub need_dxvk: bool,
-
     /// Create temp bat file with `launcher.bat` call and its flags
     ///
     /// Extremely helpful when your custom `command` feature can't handle multiline arguments (e.g. in GE-Proton)
@@ -85,7 +82,6 @@ impl Default for Features {
         Self {
             arch: None,
             bundle: None,
-            need_dxvk: true,
             compact_launch: false,
             command: None,
             env: HashMap::new(),
@@ -113,11 +109,6 @@ impl From<&JsonValue> for Features {
             bundle: match value.get("bundle") {
                 Some(value) => serde_json::from_value(value.to_owned()).unwrap_or(default.bundle),
                 None => default.bundle
-            },
-
-            need_dxvk: match value.get("need_dxvk") {
-                Some(value) => value.as_bool().unwrap_or(default.need_dxvk),
-                None => default.need_dxvk
             },
 
             compact_launch: match value.get("compact_launch") {
@@ -297,7 +288,7 @@ impl Version {
                 let mut proton = Proton::new(wine_folder, features.managed_prefix.clone())
                     .with_arch(arch);
 
-                // Small workaround. Most of stuff will work with just this
+                // Small workaround. Most of the stuff will work with just this
                 proton.steam_client_path = Some(PathBuf::from(""));
 
                 return WinApiRuntime::Default(proton);

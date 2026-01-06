@@ -7,15 +7,15 @@ use crate::integrations::steam;
 pub fn get_local_proton_versions(index: &Path) -> anyhow::Result<Vec<wine::Group>> {
     match steam::get_proton_installs_as_wines() {
         Ok(winegroups) => Ok(winegroups),
-        Err(_) => get_wine_versions(index)
+        Err(_) => get_runner_versions(index)
     }
 }
 
 /// Try to get wine versions from components index
 #[tracing::instrument(level = "debug")]
 #[cached::proc_macro::cached(key = "PathBuf", convert = r##"{ index.to_path_buf() }"##, result)]
-pub fn get_wine_versions(index: &Path) -> anyhow::Result<Vec<wine::Group>> {
-    tracing::debug!("Getting wine versions");
+pub fn get_runner_versions(index: &Path) -> anyhow::Result<Vec<wine::Group>> {
+    tracing::debug!("Getting winapi runner versions");
 
     let components = serde_json::from_str::<serde_json::Value>(&std::fs::read_to_string(index.join("components.json"))?)?;
 
@@ -105,7 +105,7 @@ impl ComponentsLoader {
         // TODO: seems like the right spot to hijack the versions and inject the steam environment.
         match steam::launched_from() {
             steam::LaunchedFrom::Steam => get_local_proton_versions(&self.folder),
-            steam::LaunchedFrom::Independent => get_wine_versions(&self.folder)
+            steam::LaunchedFrom::Independent => get_runner_versions(&self.folder)
         }
     }
 }

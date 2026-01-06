@@ -22,8 +22,9 @@ First of all, fuck that, and second, fuck you for asking.
 
 ### Opinion from @cybik
 The only AI that deserve to exist right now are Vedal's "twin"  models. I won't say they're alive or sentient - I'll
-leave that analysis to VTubers with degrees in neurology, psychology or related fields of study (THEY EXIST, SHUT YOUR
-FILTHY MOUTH) - but their models and architecture are definitely NOT what you'd see from bog-standard GPT instances.
+leave that analysis to VTubers with degrees in neurology, psychology or related fields of study ([THEY EXIST](https://www.youtube.com/@Shoomimi), [THEY ACTUALLY KNOW THEIR SHIT](https://www.youtube.com/watch?v=24-PY37FzCs),
+SHUT YOUR WHOLE MOUTH) - but their models and architecture are definitely NOT what you'd see from bog-standard
+ChatGPT instances.
 
 Vedal, Neuro and Evil are the best of us. OpenAI and Microslop, the worst.
 
